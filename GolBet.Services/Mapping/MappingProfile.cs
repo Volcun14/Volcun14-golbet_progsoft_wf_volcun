@@ -12,5 +12,12 @@ public class MappingProfile : Profile{
         // MatchDto.HomeTeamName  <- Match.HomeTeam.Name 
         // MatchDto.AwayTeamCrestUrl <- Match.AwayTeam.CrestUrl 
         CreateMap<Match, MatchDto>();
+
+        // GolBet.Services/Mapping/MappingProfile.cs
+        CreateMap<Match, MatchDetailDto>()
+
+        .ForMember(dto => dto.TotalBets,
+
+               options => options.MapFrom(match => match.Bets.Count));
     }
 }
