@@ -1,5 +1,5 @@
 ﻿// GolBet.Services/DTOs/TeamFormDto.cs 
-using System.ComponentModel.DataAnnotations
+using System.ComponentModel.DataAnnotations;
 
 namespace GolBet.Services.DTOs;
 public class TeamFormDto{
